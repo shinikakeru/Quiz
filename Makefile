@@ -10,17 +10,17 @@ lint:
 	npm run lint
 
 start:
-	npx http-server . -p 3000 -o src/pages/welcome-page/
+	npm start
 
 help:
 	@echo "------------------"
 	@echo "Available commands"
 	@echo "------------------"
-	@echo 
+	@echo ""
 	@echo "make install - install dependencies (npm ci)"
-	@echo 
+	@echo ""
 	@echo "make test - run tests"
-	@echo 
+	@echo ""
 	@echo "make lint - check with linter"
-	@echo 
+	@echo ""
 	@echo "make start - run site on port 3000 (opens automatically)"
