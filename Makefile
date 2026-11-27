@@ -10,4 +10,4 @@ lint:
 	npm run lint
 
 start:
-	npx serve .
+	npx http-server . -p 3000 -o src/pages/welcome-page/
