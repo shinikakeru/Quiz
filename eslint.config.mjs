@@ -7,13 +7,11 @@ import shell from "@eslint/shell";
 import { defineConfig } from "eslint/config";
 
 export default defineConfig([
-  {
-    ignores: ["package-lock.json", "node_modules/**"],
-  },
-  { files: ["**/*.{js,mjs,cjs}"], plugins: { js }, extends: ["js/recommended"], languageOptions: { globals: {...globals.browser, ...globals.node} } },
+  { ignores: ["package-lock.json", "node_modules/**"] },
+  { files: ["**/*.css"], plugins: { css }, language: "css/css", extends: ["css/recommended"], rules: {  "css/no-invalid-properties": [ "error", { allowUnknownVariables: true, }, ], }, },
+  { files: ["**/*.{js,mjs,cjs}"], plugins: { js }, extends: ["js/recommended"], languageOptions: { globals: { ...globals.browser, ...globals.node } } },
   { files: ["**/*.json"], plugins: { json }, language: "json/json", extends: ["json/recommended"] },
   { files: ["**/*.jsonc"], plugins: { json }, language: "json/jsonc", extends: ["json/recommended"] },
   { files: ["**/*.md"], plugins: { markdown }, language: "markdown/gfm", extends: ["markdown/recommended"] },
-  { files: ["**/*.css"], plugins: { css }, language: "css/css", extends: ["css/recommended"] },
   { files: ["**/*.sh", "**/*.bash"], plugins: { shell }, language: "shell/bash", extends: ["shell/recommended"] },
 ]);
