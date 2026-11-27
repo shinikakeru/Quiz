@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang = "ru">
 <head>
     <meta charset="UTF-8">
     <title>Регистрация</title>
@@ -6,6 +7,49 @@
     <link rel="stylesheet" href="../../styles/variables.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="body">
 
+    <div class="header-container">
+        <header class="header">
+                <a href="../welcome-page/">Назад</a>
+        </header>
+    </div>
+
+    <main class="main">
+        <div class="main-form">
+            <h1 class="form-title">Регистрация</h1>
+            <form class="register-form" id="register-form">
+                <div class="form-group">
+                    <label for="username">Логин</label>
+                    <input type="text" id="username" name="username" placeholder="Введите логин" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="example@mail.ru" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Пароль</label>
+                    <input type="password" id="password" name="password" placeholder="Введите пароль" minlength="6" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password-confirm">Повторите пароль</label>
+                    <input type="password" id="password-confirm" name="password-confirm" placeholder="Повторите пароль" minlength="6" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Зарегистрироваться</button>
+            </form>
+            <p class="form-footer-text">
+                Уже есть аккаунт? <a href="../login-page/" class="inline-link">Войти</a>
+            </p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Мой пет проект</p>
+    </footer>
+    
 </body>
+</html>
